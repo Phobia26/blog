@@ -15,6 +15,7 @@ class TaskController extends Controller
   public function index()
   {
     $employee = User::all();
+    $employee = User::all();
     $task = Task::orderBy('id')->paginate(10);
       return view('admin.tasks.index')->with('tasks', $task )->with('employees',$employee);
   }
